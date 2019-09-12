@@ -16,10 +16,50 @@
 	\[4! = 4 \times 3 \times 2 \times 1 = 24\]
 	</p>
 	<h3>1.1 Permutations:</h3>
-	<p>A permutation is the number of ways a set of objects can be ordered. 
-		\[1\,2\,3\,4\;\;\;\;1\,2\,3\,4\;\;\;\;1\,2\,3\,4 \]
-		\[1\,2\,3\,4\;\;\;\;1\,2\,3\,4\;\;\;\;1\,2\,3\,4 \]
-		\[1\,2\,3\,4\;\;\;\;1\,2\,3\,4\;\;\;\;1\,2\,3\,4 \]
+	<p>A permutation is the number of ways a set of objects can be ordered. The following example shows the permutations of the 4 objects 1,2,3 and 4:
+		\[1\,2\,3\,4\;\;\;\;2\,1\,3\,4\;\;\;\;3\,1\,2\,4\;\;\;\;4\,1\,2\,3 \]
+		\[1\,2\,4\,3\;\;\;\;2\,1\,4\,3\;\;\;\;3\,1\,4\,2\;\;\;\;4\,1\,3\,2 \]
+		\[1\,3\,2\,4\;\;\;\;2\,3\,1\,4\;\;\;\;3\,2\,1\,4\;\;\;\;4\,2\,1\,3 \]
+		\[1\,3\,4\,2\;\;\;\;2\,3\,4\,1\;\;\;\;3\,2\,4\,1\;\;\;\;4\,2\,3\,1 \]
+		\[1\,4\,2\,3\;\;\;\;2\,4\,1\,3\;\;\;\;3\,4\,1\,2\;\;\;\;4\,3\,1\,2 \]
+		\[1\,4\,3\,2\;\;\;\;2\,4\,3\,1\;\;\;\;3\,4\,2\,1\;\;\;\;4\,3\,2\,1 \]
+		An interesting obserbation about these permutations is that if the first number is removed from each of the 4 present columns, we end up with the the six permutations of the other 3 numbers not including the number removed. The columns in this example can be thought of as a groups of permutations.
 	</p>
+	<p>
+		The general case of a permutation can be represented by:
+		\[ P_N = N . P_{N - 1}\]
+		or
+		\[P_N = N!\]
+	</p>
+	<h3>1.2 Ordered Sets, Repetitions Allowed:</h3>
+	<p>Imagine a box containing 5 balls A, B, C, D, E. You pull a ball out of the box, record its name and put it back in the box (repetition). You pull a second ball (it might be the same box as the first one), record its name next to the name of the first one (order) and put back. This case has two characteristics:<br>
+		<ol>
+			<li>The same element can appear more than once.</li>
+			<li>The order in which the same element appears matters, meaning that \(A\,B\) is not the same \(B\,A\).</li>
+		</ol>
+	</p>
+	<p>
+		<b>Rule</b>: There are \(N^n\) different ordered sets of balls would result from \(n\) picks (trials)from a box containing \(N\) balls.
+	</p>
+	<p>
+		<b>Examples:</b> Flipping coins a number of times, rolling a dice.
+	</p>
+	<h3>
+		1.3 Ordered Sets, Repetitions Nor Allowed:
+	</h3>
+	<p>
+		How many different sets of \(n\) objects can be drawn from a set \(N\) of objects without repetition. This is partially similar to the previous case, except that you can't repeat the trials (You can't put a ball back in the box).
+	</p>
+	<p>
+		<b>Rule:</b> The number of ordered sets of \(n\) objects from \(N\) objects without repetition can be denoted by \(_NP_n\) and and be solved by the following pattern, Given that \(n \leq N\):
+		\[ _NP_n = N(N - 1)(N - 2) ... (N - (n-1)) \]
+		This is equivalent to:
+		\[ _NP_n = {N! \over (N - n)!} \]
+
+	</p>
+	<p>
+		<b>Examples:</b> Drawing a committee of 4 people from 13 candidates. Once  a candidate is picked, s/he can't be re-picked.
+		 
+	</p> 
 </body>
 </html>

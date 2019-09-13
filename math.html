@@ -15,7 +15,7 @@
 	example:
 	\[4! = 4 \times 3 \times 2 \times 1 = 24\]
 	</p>
-	<h3>1.1 Permutations:</h3>
+	<h3>1.2 Permutations:</h3>
 	<p>A permutation is the number of ways a set of objects can be ordered. The following example shows the permutations of the 4 objects 1,2,3 and 4:
 		\[1\,2\,3\,4\;\;\;\;2\,1\,3\,4\;\;\;\;3\,1\,2\,4\;\;\;\;4\,1\,2\,3 \]
 		\[1\,2\,4\,3\;\;\;\;2\,1\,4\,3\;\;\;\;3\,1\,4\,2\;\;\;\;4\,1\,3\,2 \]
@@ -31,7 +31,7 @@
 		or
 		\[P_N = N!\]
 	</p>
-	<h3>1.2 Ordered Sets, Repetitions Allowed:</h3>
+	<h3>1.3 Ordered Sets, Repetitions Allowed:</h3>
 	<p>Imagine a box containing 5 balls A, B, C, D, E. You pull a ball out of the box, record its name and put it back in the box (repetition). You pull a second ball (it might be the same box as the first one), record its name next to the name of the first one (order) and put back. This case has two characteristics:<br>
 		<ol>
 			<li>The same element can appear more than once.</li>
@@ -45,10 +45,10 @@
 		<b>Examples:</b> Flipping coins a number of times, rolling a dice.
 	</p>
 	<h3>
-		1.3 Ordered Sets, Repetitions Nor Allowed:
+		1.4 Ordered Sets, Repetitions Not Allowed:
 	</h3>
 	<p>
-		How many different sets of \(n\) objects can be drawn from a set \(N\) of objects without repetition. This is partially similar to the previous case, except that you can't repeat the trials (You can't put a ball back in the box).
+		How many different sets of ordered \(n\) objects can be drawn from a set \(N\) of objects without repetition. This is partially similar to the previous case, except that you can't repeat the trials (You can't put a ball back in the box).
 	</p>
 	<p>
 		<b>Rule:</b> The number of ordered sets of \(n\) objects from \(N\) objects without repetition can be denoted by \(_NP_n\) and and be solved by the following pattern, Given that \(n \leq N\):
@@ -58,8 +58,26 @@
 
 	</p>
 	<p>
-		<b>Examples:</b> Drawing a committee of 4 people from 13 candidates. Once  a candidate is picked, s/he can't be re-picked.
+		<b>Examples:</b> Drawing a committee of 4 people from 13 candidates where each member assumes a specific position. Once  a candidate is picked, s/he can't be re-picked.
 		 
+	</p>
+	<h3>
+		1.5 Unordered Sets, Repetitions Not Allowed:
+	</h3>
+	<p>
+		How many different sets of unordered \(n\) objects can be drawn from a set of \(N\) objects without repetitions? This scenario builds on the previous one. Because the order doesn't matter \(ABC = ACB = BAC = CBA\). To eliminate the repeated sets containing the same objects in different orderings, we simply divide the result from 1.4 by \(n!\) as in:
+		\[ {{_N P_n} \over {n!}} = {{N!}\over{n!(N-n)!}}\]
+	</p>
+	<p>
+		<b>Rule:</b> The number of unordered sets of \(n \) objects from a given set \(N \) is equivalent to the <i>binomial coefficient</i> which is denoteed by:
+		\[ _NC_n = {\binom N n} = {{N!}\over{n!(N -n)!}} \]
+		\(\binom N n\) stands for "\(N\) choose \(n\)"" while \( C\) in \( _NC_n\)stands for "Combinations".
+	</p>
+	<p>
+		<b>Interesting observation:</b> Any two binomial coefficients With \( N\) nominator whose \( n\)'s values add up to \( N\) have the same value, hence \( {\binom 6 4} = {\binom 6 2} = 15\). 
+	</p>
+	<p>
+		<b>Examples:</b> Drawing a committee of 4 people from 13 candidates where all members are equivalent. Once  a candidate is picked, s/he can't be re-picked.
 	</p> 
 </body>
 </html>

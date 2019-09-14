@@ -69,15 +69,69 @@
 		\[ {{_N P_n} \over {n!}} = {{N!}\over{n!(N-n)!}}\]
 	</p>
 	<p>
-		<b>Rule:</b> The number of unordered sets of \(n \) objects from a given set \(N \) is equivalent to the <i>binomial coefficient</i> which is denoteed by:
+		<b>Rule:</b> The number of unordered sets of \(n \) objects  where repetition is not allowed, from a given set \(N \) is equivalent to the <i>binomial coefficient</i> which is denoteed by:
 		\[ _NC_n = {\binom N n} = {{N!}\over{n!(N -n)!}} \]
 		\(\binom N n\) stands for "\(N\) choose \(n\)"" while \( C\) in \( _NC_n\)stands for "Combinations".
 	</p>
 	<p>
-		<b>Interesting observation:</b> Any two binomial coefficients With \( N\) nominator whose \( n\)'s values add up to \( N\) have the same value, hence \( {\binom 6 4} = {\binom 6 2} = 15\). 
+		<b>Interesting observation:</b> Any two binomial coefficients With \( N\) nominator whose \( n\)'s values add up to \( N\) have the same value, hence \[ {\binom 6 4} = {\binom 6 2} = 15\] 
 	</p>
 	<p>
-		<b>Examples:</b> Drawing a committee of 4 people from 13 candidates where all members are equivalent. Once  a candidate is picked, s/he can't be re-picked.
+		<b>Easy way to count binomial coefficients:</b> limit the number of permutations of the nominator by the value of the denominator. For example:
+		\[ {\binom 6 4} \]
+		the nominator here is 6 and the denominator is 4. This results in:
+		\[ {{6\,.\,5\,.\,4\,.\,3}\over{4!}}\] 
+	</p>
+	<p>
+		<b>Examples:</b> 
+		<ul>
+			<li>
+				Drawing a committee of 4 people from 13 candidates where all members are equivalent. Once  a candidate is picked, s/he can't be re-picked.
+			</li>
+			<li>
+				Drawing a committee of 7 from 10 people where you have 1 president, 2 vice-presidents, and 4 secretaries. Since the order doesn't matter you can pick either president, secretaries or vices first. The following two cases are equivalent:
+				<br><b>case 1</b>
+				\[ 
+				{\binom {10} 1} {\binom 9 2} {\binom 7 4} =
+				{10\over{1!}} \,.\, {{9\,.\,8}\over{2}} \,.\, {{7\,.\,6\,.\,5\,.\,4}\over{4!}}
+				\]
+				<b>case 2</b>				\[ 
+				{\binom {10} 4} {\binom 6 2} {\binom 4 1} =
+				{{10\,.\,9\,.\,8\,.\,7}\over{4!}} \,.\, {{6\,.\,5}\over{2!}} \,.\, {4 \over{1!}}
+				\]
+
+			</li>
+		</ul>
 	</p> 
+	<h3>
+		1.7 Unordered Sets, Repetitions Allowed:
+	</h3>
+	<p>
+		How many different sets of unordered \(n\) objects can be drawn from a set of \(N\) objects where repetitions are allowed? This not as common as the previous two scenarios. It can be solved by the <b>stars and bars</b> analogy, where stars represent the lines separating groups of similar object, and each star represents an objects: for example let's draw \( n = 5\) from set \(\{A, B, C\}\) whose \( N = 3\). One of the possibilities is:
+		is:
+		\[\,A, A, A, B, B\]
+		This one can be represented  by:
+		\[\star\,\,\star\,\,\star\,\star\,|\star\,\,\star\,\,|\]
+		and:
+		\[ B,B,B,B,C\]
+		can be represented by:
+		\[ | \star\,\,\star\,\,\star\,\star\,|\star\,\,\star\,\,\]
+		Notice that there is always one less bar than N, because obviously one bar is enough to separate two stars and 2 bars are enough to separate 3 stars. This stars and bars trick results in the follwing rule.
+		<b>Rule:</b> The number of unordered sets of \(n \) objects with replacement from a given set \(N \) results from:
+		\[ _NU_n = {\binom {n + (N - 1)} {N - 1} } \]
+		Where U stands for "unordered".
+	</p>
+	<p>
+		<b>Examples:</b> 
+		<ul>
+			<li>5 dice are rolled all at once for 3 times.</li>
+			<li>Distribute 10 dollars among 4 people, where each person can receive a sum between 0 and 10 dollars. This is a little confusing and tricky on purpose. Your \( N\)here is 4, while \( n\) is 10. Name the 4 people \( A,B,C,D\), put them in a box, pull them one at a time and write the name until you reach 10. The rest is arithmetic.</li>
+		</ul>
+	</p>
+	<h3>1.8 Binomial Coefficients:</h3>
+	<h4>1.8.1 Coins and Pascal Triangles:</h4>
+	<p>
+		if you flip multiple coins or a one coin multiple times, you will find that 
+	</p>
 </body>
 </html>

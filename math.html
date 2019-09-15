@@ -5,8 +5,8 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js"></script>
 	<title>math</title>
 </head>
-<body style="font-size: 16px;font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; padding-left: 11%; padding-right: 11%; padding-top: 4%">
-	<h1 style="text-align: center;">PROBABILITY</h1>
+<body style="font-size: 18px;font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; padding-left: 11%; padding-right: 11%; padding-top: 4%">
+	<h1 style="text-align: center;"> PROBABILITY</h1>
 	<h2>Chapter 1: Combinatorics</h2>
 	<h3>1.1 Factorials:</h3>
 	<p>
@@ -131,7 +131,47 @@
 	<h3>1.8 Binomial Coefficients:</h3>
 	<h4>1.8.1 Coins and Pascal Triangles:</h4>
 	<p>
-		if you flip multiple coins or a one coin multiple times, you will find that 
+		Constructing a Pascal triangle can be achieved through successive  incremental coin flips. The tip of the triangle is made by a zero flip, next to it a 1 flip.. etc. as we get farther from the two sides of the triangle (It's essentially an isosceles triangle), the number of ways of getting heads or tails increases and vice versa. If you flip a coin 6 times, there are 20 ways that 3 heads can be scored, while there is only 1 way that 1 or 6 heads can be gotten.
 	</p>
+	<p>
+		Basically Pascal triangle is pyramid of binomial coefficients. The nominators of these binomial coefficients increase as you move downwards. The denominators increase as you move from left to right. Each row of BC's has the same nominator. The denominators within that row increase from left to right.  
+	</p>
+	<p>
+		There are \( \binom n k \) ways that \( k\) heads can come up in \( k\) coin flips! This also applies the committee, where a committee of \( k\) members can be drawn from a group of \( n\) people.
+	</p>
+	<h4>1.8.2 \( (a + b)^n\) and Pascal Triangles:</h4>
+	<p>
+		The sum of a row in PT (Pascal Triangle) is as follows:
+		\[ {\binom n 0} + {\binom n 1} + {\binom n 2} + ... + {\binom n {n - 1}} + {\binom n n}\]
+		This subsection is about binomial expansion, Algebra 2!! What the lambda!!?
+		<br> Basically, BC is used to count the number of ways \( k\) can be chosen from \( n\) things, unordered and without repetitions.
+	</p>
+	<br>
+	\[ -------------------------\]
+	<br>
+	<h2>
+		Chapter 2: Probability:
+	</h2>
+	<h3>
+		2.1 Preliminary:
+	</h3>
+	<p>
+		Probability is represented by a fraction of the number of desired outcomes over the total number if possibilities outcomes as in:
+		\[ P = { {number \,of \,desired \,outcomes} \over {total\, number\, of \,possibilities \,outcomes}}\]
+		A lot of rambling! Averages and as the number of trials get larger and larger, the actual desired outcomes will get closer and closer to their probabilities.
+	</p>
+	<h3>2.2 Rules of Probability:</h3>
+	<p>
+		The rules of probability apply to multiple events rather than a single even like tossing a dice. These rules deal with questions like what's the likelihood of both events occurring or what's the probability of either event happening?
+	</p>
+	<h4>2.2.1 AND: The Intersection Probability \( P(A \,and\, B)\):</h4>
+	<p>
+		Let A and B represent two events, something like tossing a coin twice. What is the probability that both events occur (<i>joint probability</i>)? The two events can be either independent or dependent
+	</p>
+	<h4>Independent events:</h4>
+	<p>
+		This includes rolling 2 dice. The two dice have no effect on each other. An other example is picking a card that's both a king and a heart.
+	</p>
+
 </body>
 </html>

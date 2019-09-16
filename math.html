@@ -172,6 +172,28 @@
 	<p>
 		This includes rolling 2 dice. The two dice have no effect on each other. An other example is picking a card that's both a king and a heart.
 	</p>
+	<p>
+		<b>Rule:</b> If \( A\) and \( B\) are independent, then:
+		\[ P(A \, and \, B) = P(A)\,.\,P(B)\]
+		This is reminiscent of the ordered sets with repetitions allowed from chapter 1. It follows the exact same logic.
+	</p>
+		<h4>Dependent events:</h4>
+	<p>
+		This includes pulling a ball out of a box and NOT returning back, then pulling a second ball. If the first ball is blue and the second one is blue as well, the probability of the second ball is changed. Even \( B\) is affected by Event \( A\).
+	</p>
+	<p>
+		<b>Rule:</b> If \( A\) and \( B\) are dependent, then the probability of both of them occurring is:
+		\[ P(A \, and \, B) = P(A)\,.\,P(B\,|\,A)\]
+		where \( P(B\,|\,A)\) stands for the probability that \( B\) occurs. This is a <i>conditional probability</i> because a given condition is assumed, namely \( A\). It's read as "The probability of \( B\), given \( A\)".<br>
+		<b>Example</b>: We have a box with 2 red balls and 3 blue balls. Picking a red ball as even A and then picking a blue ball as event B can be represented as:
+		\[ P(Red_1\, and \, Blue_2) = P(Red_1) \,.\, P(Blue_2\,|\,Red_1)=
+		{2 \over 5} . {3\over 4} \] 
+		Notice that the denominator increased after pulling the second ball.
+		
+	</p>
+	<p>
+		This is reminiscent of the ordered sets without repetitions from chapter 1. It follows the exact same logic.
+	</p>
 
 </body>
 </html>

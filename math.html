@@ -164,7 +164,7 @@
 	<p>
 		The rules of probability apply to multiple events rather than a single even like tossing a dice. These rules deal with questions like what's the likelihood of both events occurring or what's the probability of either event happening?
 	</p>
-	<h4>2.2.1 AND: The Intersection Probability \( P(A \,and\, B)\):</h4>
+	<h4>2.2.1 AND: The Intersection Probability  or \( P(A \cap B)\):</h4>
 	<p>
 		Let A and B represent two events, something like tossing a coin twice. What is the probability that both events occur (<i>joint probability</i>)? The two events can be either independent or dependent
 	</p>
@@ -194,6 +194,41 @@
 	<p>
 		This is reminiscent of the ordered sets without repetitions from chapter 1. It follows the exact same logic.
 	</p>
+	<h3>2.2.2 OR: The Union Probability,  \( P(A \,or\, B)\) or \( P(A \cup B)\):</h3>
+	<p>
+		What is the probability of  getting 1 or 3 or both,when rolling 2 dice? What is the probability of  getting 1 or 3 or both,when rolling the same die? There two situation in this type, exclusive and nonexclusive events:
+	</p>
+	<h4>Exclusive Events:</h4>
+	<p>
+		Two events are <i>exclusive</i> if they preclude each other, meaning they can't both happen at the same time.<br>
+		<b>Rule:</b> If two events \( A\) and \( B\) are exclusive, the probability that either of them occurs is the sum of their individual probabilities as in :
+		\[P(A \,or\, B) = P(A) \,+\, P(B) \]
+	</p>
+	<h4>Nonexclusive Events:</h4>
+	<p>
+		Two events are <i>nonexclusive</i> if they can both happen, for example, when rolling two dice. Either A or B or both A and B happen. An example is rolling a die and getting all even numbers and multiples of 3. Because the two are nonexclusive, 6 is a result of both A and B.
+		<b>Rule</b>: If two events \( A\) and \( B\)are nonexclusive, the probability of either one or both of them occurring is equal to:
+		\[P(A \,or\, B) = P(A) \,+\, P(B)\,-\, P(A \, and \, B)\]
+		We subtract \( P(A \, and \, B)\) because, we don't want to double count it. It's enough that either \( A\) or \( B\) occurs.
+	</p>
+	<h4>
+		(In)dependence and (Non)exclusiveness:
+	</h4>
+	<p>
+		Independent and Exclusive: NO<br>
+		Independent and Nonexclusive: YES<br>
+		Dependent and Exclusive: YES<br>
+		Dependent and Nonexclusive: YES<br>
+	</p>
+	<h3>2.3 Examples:</h3>
+	<p>It's claimed that only through examples probability can be understood</p>
+	<h4>2.3.1 The Art of "Not":</h4>
+	<p>It might be advisable in some situations to calculate the <i>complement</i> of a probability, i.e. \( P(not \, A)\) instead of \( P(A)\) to make life easier.<br>What is, for example, the probability of getting at least one 6 after rolling 3 dice? Instead of going through some byzantine voodoo, you can instead calculate its zero probability and subtract that from 1. We know that:
+		\[ P(A) = 1 \, - \, P(not A) \]
+	In our example we need to get the zero probability of get 6 after 3 rolls. This is done as in:
+	\[ 1 - ({5 \over 6})^3 = {1- {125 \over 216}} = {91 \over 216}\]
+	</p>
+
 
 </body>
 </html>

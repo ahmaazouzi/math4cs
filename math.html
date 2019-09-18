@@ -206,8 +206,8 @@
 	</p>
 	<h4>Nonexclusive Events:</h4>
 	<p>
-		Two events are <i>nonexclusive</i> if they can both happen, for example, when rolling two dice. Either A or B or both A and B happen. An example is rolling a die and getting all even numbers and multiples of 3. Because the two are nonexclusive, 6 is a result of both A and B.
-		<b>Rule</b>: If two events \( A\) and \( B\)are nonexclusive, the probability of either one or both of them occurring is equal to:
+		Two events are <i>nonexclusive</i> if they can both happen, for example, when rolling two dice. Either A or B or both A and B happen. An example is rolling a die and getting all even numbers and multiples of 3. Because the two are nonexclusive, 6 is a result of both A and B.<br>
+		<b>Rule</b>: If two events \( A\) and \( B\) are nonexclusive, the probability of either one or both of them occurring is equal to:
 		\[P(A \,or\, B) = P(A) \,+\, P(B)\,-\, P(A \, and \, B)\]
 		We subtract \( P(A \, and \, B)\) because, we don't want to double count it. It's enough that either \( A\) or \( B\) occurs.
 	</p>
@@ -227,6 +227,34 @@
 		\[ P(A) = 1 \, - \, P(not A) \]
 	In our example we need to get the zero probability of get 6 after 3 rolls. This is done as in:
 	\[ 1 - ({5 \over 6})^3 = {1- {125 \over 216}} = {91 \over 216}\]
+	</p>
+	<h4>2.3.2 Picking Seats:</h4>
+	<p>
+		<b>Example 1 (Middle in the middle):</b> We have 3 people and 3 chairs. What is the probability that the person with the middle height is seated in the middle seat? Suggested solutions include:
+		<ul>
+			<li>The mid-tall person has a 2/6 or 1/3 chance of sitting on any one seat. </li>
+			<li>Put tallest person in middle seat. This is a 0 chance that middle height person sits in the middle seat. What is left now is 2/3 chance that mid or short person sits in middle. Mid person now have half 2/3 chance to sit in middle 2/3 * 1/2. This can be summarized as:
+				\[ {1 \over 3} . 0 + {2 \over 3} . {1 \over 2} = {1 \over 3} \]
+			</li>
+		</ul>
+	</p>
+	<p>
+		<b>Ignoring the rest of examples for now and jumping directly to Bayes theorem.</b>
+	</p>
+	<h3>Bayes' Theorem:</h3>
+	<p>
+		There are three forms of the famed Bayes' theorem:
+		<ul>
+			<li>
+				Simple form:
+				\[ P(A|Z) = {{P(Z|A) . P(A)}\over {P(Z)}}\]
+			</li>
+			<li>Explicit form:</li>
+			\[ P(A|Z) = {{P(Z|A) . P(A)} \over {P(Z|A) . P(A) + P(Z| \sim A) . P(\sim A)}}\]
+			<li>General form:</li>
+			\[ P(A|Z) = {{P(A|Z_k) . P(A_k)} \over {\sum_i\, P(Z|A_i) . P(A_i)}}\]
+		</ul>
+		The explicit form seems to b the more useful one, at least for one. The following example is probably a great explanation of how Bayes Theorem works.
 	</p>
 
 
